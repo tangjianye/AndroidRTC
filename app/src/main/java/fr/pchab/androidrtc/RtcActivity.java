@@ -8,14 +8,16 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Toast;
+
 import org.json.JSONException;
 import org.webrtc.MediaStream;
 import org.webrtc.VideoRenderer;
 import org.webrtc.VideoRendererGui;
-import fr.pchab.webrtcclient.WebRtcClient;
-import fr.pchab.webrtcclient.PeerConnectionParameters;
 
 import java.util.List;
+
+import fr.pchab.webrtcclient.PeerConnectionParameters;
+import fr.pchab.webrtcclient.WebRtcClient;
 
 public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
     private final static int VIDEO_CALL_SENT = 666;
@@ -98,7 +100,7 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
     public void onPause() {
         super.onPause();
         vsv.onPause();
-        if(client != null) {
+        if (client != null) {
             client.onPause();
         }
     }
@@ -107,14 +109,14 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
     public void onResume() {
         super.onResume();
         vsv.onResume();
-        if(client != null) {
+        if (client != null) {
             client.onResume();
         }
     }
 
     @Override
     public void onDestroy() {
-        if(client != null) {
+        if (client != null) {
             client.onDestroy();
         }
         super.onDestroy();
