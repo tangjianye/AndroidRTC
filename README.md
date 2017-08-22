@@ -28,3 +28,7 @@ Your stream should appear as "android_test" in ProjectRTC, so you can also use t
 ## Author
 
 - [Pierre Chabardes](mailto:pierre@chabardes.net)
+
+## 注意
+
+- 不支持android7.0机型
